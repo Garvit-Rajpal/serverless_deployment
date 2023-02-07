@@ -21,23 +21,23 @@ functions:
       - httpApi:
           path: /
           method: get
-  kaamBharo:
+  CreateTask:
     handler: src/Create_work.handler
     events:
       - httpApi:
-          path: /kaam
+          path: /task
           method: post
-  kaamDikhao:
-    handler: src/fetch_work.handler
+  FetchTask:
+    handler: src/Fetch_work.handler
     events:
       - httpApi:
-          path: /kaam
+          path: /task-get
           method: get
-  kaamKhatamKaro:
+  CompleteTask:
     handler: src/complete_work.handler
     events:
       - httpApi:
-          path: /kaam/{id}
+          path: /task/{id}
           method: put
 
 resources:
